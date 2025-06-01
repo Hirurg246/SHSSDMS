@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MsgProcModule": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
