@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DeviceControlModule": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

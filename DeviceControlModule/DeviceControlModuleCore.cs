@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthModule
+namespace DeviceControlModule
 {
-    internal class AuthModuleCore : ModuleCore.ModuleCore
+    internal class DeviceControlModuleCore : ModuleCore.ModuleCore
     {
         public override async Task ProcessConnection(TcpClient connection)
         {
@@ -27,7 +25,7 @@ namespace AuthModule
                 stream.Read(data);
                 string? msg = Encoding.UTF8.GetString(data);
                 msg = Decrypt(msg, adress);
-                string answer = AuthHelper.ProcessCommand(msg);
+                string answer = DeviceControlHelper.ProcessCommand(msg);
                 answer = Encrypt(answer, adress);
                 networkPlugin.SendMessage(answer, adress);
             }
@@ -37,7 +35,7 @@ namespace AuthModule
             }
         }
 
-        public AuthModuleCore() : base()
+        public DeviceControlModuleCore() : base()
         {
             _ = Task.Run(() => networkPlugin.ReceiveConnections(this));
         }

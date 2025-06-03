@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuthModule
+namespace DataCollectModule
 {
-    internal class AuthModuleCore : ModuleCore.ModuleCore
+    internal class DataCollectModuleCore : ModuleCore.ModuleCore
     {
         public override async Task ProcessConnection(TcpClient connection)
         {
@@ -26,9 +24,9 @@ namespace AuthModule
                 string adress = IP.Address + ":" + IP.Port;
                 stream.Read(data);
                 string? msg = Encoding.UTF8.GetString(data);
-                msg = Decrypt(msg, adress);
-                string answer = AuthHelper.ProcessCommand(msg);
-                answer = Encrypt(answer, adress);
+                if (mode == 2) msg = Decrypt(msg, adress);
+                string answer = DataCollectHelper.ProcessCommand(msg);
+                if (mode == 2) answer = Encrypt(answer, adress);
                 networkPlugin.SendMessage(answer, adress);
             }
             finally
@@ -37,7 +35,7 @@ namespace AuthModule
             }
         }
 
-        public AuthModuleCore() : base()
+        public DataCollectModuleCore() : base()
         {
             _ = Task.Run(() => networkPlugin.ReceiveConnections(this));
         }

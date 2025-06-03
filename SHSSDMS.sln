@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkPlugin", "NetworkPlu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleCore", "ModuleCore\ModuleCore.csproj", "{37473FFC-9B7E-42F8-99B2-61A98D0CBF55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceControlModule", "DeviceControlModule\DeviceControlModule.csproj", "{30DA861E-E60C-42B0-91C5-D2140BAFD5A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{37473FFC-9B7E-42F8-99B2-61A98D0CBF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37473FFC-9B7E-42F8-99B2-61A98D0CBF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37473FFC-9B7E-42F8-99B2-61A98D0CBF55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30DA861E-E60C-42B0-91C5-D2140BAFD5A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DA861E-E60C-42B0-91C5-D2140BAFD5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DA861E-E60C-42B0-91C5-D2140BAFD5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DA861E-E60C-42B0-91C5-D2140BAFD5A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

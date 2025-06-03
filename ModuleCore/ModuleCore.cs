@@ -18,7 +18,7 @@ namespace ModuleCore
 
         protected Func<string, string, string?> decrypt;
 
-        public ModuleCoreData moduleCoreData;
+        protected ModuleCoreData moduleCoreData;
 
         protected IFileWorkPlugin? fileWorkPlugin { get; } = null;
 
