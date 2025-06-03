@@ -1,4 +1,4 @@
-﻿namespace MsgProcModule
+﻿namespace AuthModule
 {
     internal class Program
     {

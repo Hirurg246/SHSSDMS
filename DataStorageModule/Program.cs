@@ -1,4 +1,4 @@
-﻿namespace MsgProcModule
+﻿namespace DataStorageModule
 {
     internal class Program
     {

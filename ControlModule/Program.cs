@@ -1,4 +1,4 @@
-﻿namespace MsgProcModule
+﻿namespace ControlModule
 {
     internal class Program
     {

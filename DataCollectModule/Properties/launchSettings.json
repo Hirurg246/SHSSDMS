@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DataCollectModule": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DataStorageModule": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
